@@ -1,0 +1,19 @@
+#This covers basic operators, conditionals, try and except blocks, and print statements
+
+hours = input("Enter the amount of hours worked")
+h = float(hours)
+
+rate = input("Enter your hourly pay")
+r = float(rate)
+
+#I'm going to assume that any hours worked that exceed 40 hours per week earn 1.5x as much money
+
+try:
+    gross = 0
+    if h <= 40:
+        gross = h*r
+    else:
+        gross = ((1.5*r)*(h-40))+(r*40)
+    print(gross)
+except:
+    print("Please enter a valid number")
